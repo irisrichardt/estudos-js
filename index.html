@@ -17,18 +17,17 @@
     <main>
         <img src="./img/bag.png" alt="sacola de compras">
         <form>
-            <input class="input-item" type="text" placeholder="Digite o item que deseja adicionar"></input>
-            <button class="button-item">Salvar item</button>
+            <input class="input-item" id="input-item" type="text" placeholder="Digite o item que deseja adicionar"></input>
+            <button class="button-item" id="adicionar-item">Salvar item</button>
         </form>
 
         <div class="container-lista">
             <h2>Lista de compras</h2>
             <hr>
-
-            <ul>
+            <ul id="lista-de-compras">
                 <li>
                     <div class="lista-item-container">
-                        <div>
+                        <!-- <div>
                             <div class="container-checkbox">
                                 <label for="checkbox-1">
                                     <input type="checkbox" class="input-checkbox" id="checkbox-1" />
@@ -36,22 +35,23 @@
                                 </label>
                             </div>
                             <p>Arroz - 1Kg</p>
-                        </div>
+                        </div> -->
 
-                        <div>
+                        <!-- <div>
                             <button class="item-lista-button">
                                 <img src="./img/delete.svg" alt="remover">
                             </button>
                             <button class="item-lista-button">
                                 <img src="./img/edit.svg" alt="editar">
                             </button>
-                        </div>
+                        </div> -->
                     </div>
                     <p class="texto-data">Quarta-feira (02/10/2024) às 15:00</p>
                 </li>
             </ul>
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
