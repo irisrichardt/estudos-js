@@ -64,23 +64,23 @@ p {
   text-align: left;
 }
 
-#input-item {
+.input-item {
   display: block;
-  padding: 16px 16px;
+  padding: 12px 16px;
   border-radius: 24px;
   border: 1px solid var(--preto);
   width: 307px;
+
+  font-family: var(--fonte-texto);
 }
 
-#input-item::placeholder {
+.input-item::placeholder {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   line-height: 19px;
-  text-align: c;
 }
 
-#adicionar-botao {
-  text-align: center;
+.button-item {
   padding: 12px 16px;
   border-radius: 24px;
   background-color: var(--cor-primaria);
@@ -98,27 +98,22 @@ form {
   gap: 16px;
 }
 
-.item-lista-container {
+.lista-item-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.container-nome-compra {
+.lista-item-container div {
   display: flex;
+  gap: 8px;
 }
 
 ul {
   list-style-type: none;
-  width: 100%;
 }
 
-.item-lista-texto {
-  font-size: 12px;
-  line-height: 20px;
-}
-
-.checkbox-input {
+.input-checkbox {
   display: none;
 }
 
@@ -129,7 +124,6 @@ ul {
   border: 1px solid var(--preto);
   cursor: pointer;
   border-radius: 4px;
-  margin-right: 8px;
 }
 
 .checked {
@@ -137,7 +131,7 @@ ul {
   position: relative;
 }
 
-.checked::after {
+.checkbox-customizado.checked::after {
   content: "";
   position: absolute;
   left: 30%;
@@ -151,7 +145,16 @@ ul {
   transform: rotate(-140deg);
 }
 
-.botao-acao {
-  background-color: transparent;
+.texto-data {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.item-lista-button {
   border: none;
+  background-color: transparent;
+}
+
+.container-lista {
+  width: 100%;
 }
