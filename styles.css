@@ -160,3 +160,7 @@ ul {
 .container-lista {
   width: 100%;
 }
+
+#container-lista-comprados {
+  display: none;
+}
