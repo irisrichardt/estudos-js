@@ -25,6 +25,19 @@ function adicionarItem(e) {
   const checkBoxLabel = document.createElement("label");
   checkBoxLabel.setAttribute("for", checkBoxInput.id);
 
+  checkBoxLabel.addEventListener("click", function (e) {
+    const checkboxInput = e.currentTarget.querySelector(".input-checkbox");
+    const checkboxCustomizado = e.currentTarget.querySelector(
+      ".checkbox-customizado"
+    );
+
+    if (checkboxInput.checked) {
+      checkboxCustomizado.classList.add("checked");
+    } else {
+      checkboxCustomizado.classList.remove("checked");
+    }
+  });
+
   const checkBoxCustomizado = document.createElement("div");
   checkBoxCustomizado.classList.add("checkbox-customizado");
 
