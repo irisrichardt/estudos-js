@@ -1,8 +1,10 @@
+import { gerarDiaDaSemana } from "./gerarDiaDeSemana.js";
+
 const listaDeCompras = document.getElementById("lista-de-compras");
 const listaComprados = document.getElementById("lista-comprados");
 let contador = 0;
 
-export function criarItemDaLista(e) {
+export function criarItemDaLista(item) {
   const itemDaLista = document.createElement("li");
   const containerItemLista = document.createElement("div");
   containerItemLista.classList.add("lista-item-container");
@@ -58,7 +60,7 @@ export function criarItemDaLista(e) {
 
   const nomeDoItem = document.createElement("p");
   nomeDoItem.id = "item-titulo";
-  nomeDoItem.innerText = e;
+  nomeDoItem.innerText = item;
   containerNomeDoItem.appendChild(nomeDoItem);
 
   const containerBotoes = document.createElement("div");
@@ -90,12 +92,7 @@ export function criarItemDaLista(e) {
   containerItemLista.appendChild(containerBotoes);
 
   const itemData = document.createElement("p");
-  itemData.innerText = `${new Date().toLocaleDateString("pt-BR", {
-    weekday: "long",
-  })} (${new Date().toLocaleDateString()}) às ${new Date().toLocaleTimeString(
-    "pt-BR",
-    { hour: "numeric", minute: "numeric" }
-  )}`;
+  itemData.innerText = gerarDiaDaSemana();
   itemData.classList.add("texto-data");
 
   itemDaLista.appendChild(containerItemLista);

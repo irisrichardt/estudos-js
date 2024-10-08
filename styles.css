@@ -164,3 +164,7 @@ ul {
 #container-lista-comprados {
   display: none;
 }
+
+#mensagem-lista-vazia {
+  text-align: center;
+}
