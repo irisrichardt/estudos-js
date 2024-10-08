@@ -1,3 +1,4 @@
+import { excluirItem } from "./excluirItem.js";
 import { gerarDiaDaSemana } from "./gerarDiaDeSemana.js";
 import { verificarListaComprados } from "./verificarListaComprados.js";
 
@@ -69,6 +70,10 @@ export function criarItemDaLista(item) {
 
   botaoRemover.appendChild(imagemRemover);
   containerBotoes.appendChild(botaoRemover);
+
+  botaoRemover.addEventListener("click", function () {
+    excluirItem(itemDaLista);
+  });
 
   const botaoEditar = document.createElement("button");
   botaoEditar.classList.add("item-lista-button");
