@@ -150,6 +150,7 @@ ul {
 .texto-data {
   font-size: 12px;
   line-height: 20px;
+  margin-bottom: 8px;
 }
 
 .item-lista-button {
@@ -161,10 +162,10 @@ ul {
   width: 100%;
 }
 
-#container-lista-comprados {
-  display: none;
-}
-
 #mensagem-lista-vazia {
   text-align: center;
+}
+
+.comprados {
+  margin-top: 16px;
 }

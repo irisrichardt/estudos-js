@@ -1,4 +1,5 @@
 import { gerarDiaDaSemana } from "./gerarDiaDeSemana.js";
+import { verificarListaComprados } from "./verificarListaComprados.js";
 
 const listaDeCompras = document.getElementById("lista-de-compras");
 const listaComprados = document.getElementById("lista-comprados");
@@ -34,19 +35,14 @@ export function criarItemDaLista(item) {
     if (checkboxInput.checked) {
       checkboxCustomizado.classList.add("checked");
       itemTitulo.style.textDecoration = "line-through";
-      document.getElementById("container-lista-comprados").style.display =
-        "block";
       listaComprados.appendChild(itemDaLista);
     } else {
       checkboxCustomizado.classList.remove("checked");
       itemTitulo.style.textDecoration = "none";
       listaDeCompras.appendChild(itemDaLista);
-
-      if (!listaComprados.hasChildNodes()) {
-        document.getElementById("container-lista-comprados").style.display =
-          "none";
-      }
     }
+
+    verificarListaComprados(listaComprados);
   });
 
   const checkBoxCustomizado = document.createElement("div");
