@@ -1,6 +1,7 @@
 import { excluirItem } from "./excluirItem.js";
 import { gerarDiaDaSemana } from "./gerarDiaDeSemana.js";
 import { verificarListaComprados } from "./verificarListaComprados.js";
+import { verificarListaVazia } from "./verificarListaVazia.js";
 
 const listaDeCompras = document.getElementById("lista-de-compras");
 const listaComprados = document.getElementById("lista-comprados");
@@ -43,6 +44,7 @@ export function criarItemDaLista(item) {
       listaDeCompras.appendChild(itemDaLista);
     }
 
+    verificarListaVazia(listaDeCompras);
     verificarListaComprados(listaComprados);
   });
 
