@@ -1,3 +1,4 @@
+import { editarItem } from "./editarItem.js";
 import { excluirItem } from "./excluirItem.js";
 import { gerarDiaDaSemana } from "./gerarDiaDeSemana.js";
 import { verificarListaComprados } from "./verificarListaComprados.js";
@@ -83,6 +84,10 @@ export function criarItemDaLista(item) {
   const imagemEditar = document.createElement("img");
   imagemEditar.src = "img/edit.svg";
   imagemEditar.alt = "Editar";
+
+  botaoEditar.addEventListener("click", function () {
+    editarItem(itemDaLista);
+  });
 
   botaoEditar.appendChild(imagemEditar);
   containerBotoes.appendChild(botaoEditar);
